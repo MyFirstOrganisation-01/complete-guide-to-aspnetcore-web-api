@@ -26,8 +26,19 @@ namespace my_books.Data.Services
             _context.SaveChanges();
         }
         
+        public int  CalculateRating(int AuthorAge)
+        {
+            var rating = 99;
+            
+            if(AuthorAge > 50)
+                return 100;
+            else
+                return 50;
+        }
+        
         public void AddAAuthor(AuthorVM book)
         {
+            var isbn_number = "123456789;
             var _author = new Author()
             {
                FullName = book.FullName
