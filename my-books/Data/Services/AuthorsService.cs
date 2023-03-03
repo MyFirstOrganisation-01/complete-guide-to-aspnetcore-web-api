@@ -26,7 +26,7 @@ namespace my_books.Data.Services
             _context.SaveChanges();
         }
         
-        public int  CalculateRating(int AuthorAge)
+        public int CalculateRating(int AuthorAge)
         {
             var rating = 99;
             
