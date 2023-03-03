@@ -64,6 +64,16 @@ namespace my_books.Data.Services
             return _bookWithAuthors;
         }
 
+        public int Rating(int AuthorAge)
+        {
+            var rating = 99;
+            
+            if(AuthorAge > 50)
+                return 100;
+            else
+                return 50;
+        }
+        
         public Book UpdateBookById(int bookId, BookVM book)
         {
             var _book = _context.Books.FirstOrDefault(n => n.Id == bookId);
